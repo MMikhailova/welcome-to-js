@@ -30,11 +30,16 @@ console.log('--- begin program ---');
 
 /* --- declare initial output --- */
 
-let output = _;
+let output = null;
 
 /* --- create final output --- */
 
-while (_) {}
+while (output===null){
+  output=prompt('enter text that starts with a capital letter and ends with a period');
+if (output[0].toUpperCase!==output[0] || output[output.length]!=='.' ) {
+  output===null;
+}
+output=output[0].toLowerCase + output.slice(1,output.length-1);
 
 /* --- alert the result --- */
 
@@ -42,16 +47,3 @@ console.log('output:', output);
 alert(output);
 
 console.log('--- end program ---');
-
-/*
-  checklist:
-    [ ] the code is formatted
-    [ ] linting check passes
-    [ ] variable names are clear and helpful
-    [ ] each line of code is explained in a comment above that line
-      - use full sentences and correct JS vocabulary
-    [ ] the program runs
-    [ ] the program has no errors
-    [ ] all of the test cases work
-    [ ] you tested strange inputs that could break your program (edge cases)
-*/

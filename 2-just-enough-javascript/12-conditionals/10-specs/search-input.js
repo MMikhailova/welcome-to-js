@@ -37,18 +37,21 @@ console.log('--- begin program ---');
 
 /* --- gather user input --- */
 
-let text = prompt(_);
+let text = prompt('enter some text');
 console.log('text:', text);
 
-let query = prompt(_);
+let query = prompt('enter a query');
 console.log('query:', query);
 
 /* --- declare initial output --- */
 
-let output = _;
+let output = ':(';
 
 /* --- create final output --- */
-
+if( text!==null && query!==null){
+  if(text.includes(query)===true){output=text+'does include'+query}
+  else {output=text+'does not include'+query}
+}
 /* --- alert the result --- */
 
 console.log('output:', output);

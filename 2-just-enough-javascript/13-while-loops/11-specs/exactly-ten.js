@@ -23,11 +23,19 @@ console.log('--- begin program ---');
 
 /* --- declare initial output --- */
 
-let output = _;
+let output = null;
 
 /* --- create final output --- */
 
-while (_) {}
+while (output===null || output.length!==10) {
+      while(output!==null && output.length<10){
+        output=prompt(10-output.length+' characters too short')};
+        while(output!==null && output.length>10){
+        output=prompt(output.length-10+' characters too long')}
+  output=prompt('enter smth that 10 long');
+    }
+  
+
 
 /* --- alert the result --- */
 
